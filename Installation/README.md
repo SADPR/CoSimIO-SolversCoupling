@@ -1,5 +1,7 @@
 ## Installation
 
+This repository is based on the official [CoSimIO tutorial](https://kratosmultiphysics.github.io/CoSimIO/tutorials/python/integration_co_sim_io.html) provided by Kratos Multiphysics. Some files and examples have been adapted to suit specific needs for coupling solvers and data exchange.
+
 ### 1. Clone the CoSimIO Repository
 
 ```bash
