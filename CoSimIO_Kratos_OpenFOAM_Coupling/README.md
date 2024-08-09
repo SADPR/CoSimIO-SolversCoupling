@@ -104,6 +104,37 @@ def interpolate_velocity(self, x, y, velocities):
 
 This explanation helps to highlight the key parts of the process for users, while still providing enough context to follow along.
 
+## Synchronizing Data Exchange with Acknowledgment
+In this coupling tutorial, we ensure synchronization between the OpenFOAM and Kratos solvers by using acknowledgment mechanisms. After exporting the velocity data, the openfoam_cosimio_sender.py waits for acknowledgment from the Kratos script before proceeding to the next time step. Similarly, Kratos sends an acknowledgment back to OpenFOAM after it receives and processes the data.
+
+Below are the key code snippets demonstrating this acknowledgment process:
+
+### OpenFOAM Script (openfoam_cosimio_sender.py):
+
+```python
+# Wait for acknowledgment from the importing script
+identifier = f"acknowledge_timestep_{str(end_time).replace('.', '_')}"
+ack_info = CoSimIO.Info()
+ack_info.SetString("identifier", identifier)
+ack_info.SetString("connection_name", connection_name)
+ack_data = CoSimIO.DoubleVector()
+CoSimIO.ImportData(ack_info, ack_data)
+```
+
+### Kratos Script (kratos_cosimio_receiver.py):
+
+```python
+# Acknowledge receipt of data
+identifier = f"acknowledge_timestep_{str(self.time_step_cosimio).replace('.', '_')}"
+ack_info = CoSimIO.Info()
+ack_info.SetString("identifier", identifier)
+ack_info.SetString("connection_name", self.connection_name)
+ack_data = CoSimIO.DoubleVector([1.0])  # Dummy data to send as acknowledgment
+CoSimIO.ExportData(ack_info, ack_data)
+```
+
+By incorporating this process, both solvers remain in sync throughout the simulation, ensuring that data is consistently and reliably exchanged between OpenFOAM and Kratos.
+
 ### Note on OpenFOAM Integration
 To the best of my knowledge, OpenFOAM does not provide a straightforward Python interface for controlling each time step's  directly. As a workaround, this example restarts the simulation at each time step, utilizing OpenFOAM's built-in functions to output the desired data. The data exchange itself is completely handled by CoSimIO.
 
