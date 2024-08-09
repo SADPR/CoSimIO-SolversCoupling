@@ -8,5 +8,6 @@ This repository is based on the official [CoSimIO tutorial](https://kratosmultip
 
 1. [Installation of CoSimIO](./Installation/README.md)
 2. [Tutorial for CoSimIO (Python without solvers)](./CoSimIO_Script_Tutorials)
-3. Tutorial for Integrating Kratos with CoSimIO (./CoSimIO_Kratos_BasicTutorials)
-4. [Tutorial for Coupling Kratos with OpenFOAM]
+3. [Tutorial for Integrating Kratos with CoSimIO](./CoSimIO_Kratos_BasicTutorials)
+4. [Tutorial for Integrating Kratos with CoSimIO](./CoSimIO_Kratos_BasicTutorials)
+5. [Tutorial for Coupling Kratos with OpenFOAM]
