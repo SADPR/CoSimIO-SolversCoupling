@@ -27,16 +27,16 @@ python3 import_velocity_from_kratos.py
 This script connects to the Kratos exporter, waits for the data at each time step, processes it, and prints the imported velocities.
 
 ## Key Operations in the Scripts
-Export Script (export_velocity_from_kratos.py):
+### Export Script (export_velocity_from_kratos.py):
 
-Connects to the receiver using CoSimIO.
-After each solution step, it gathers velocity data and exports it using CoSimIO.
-Waits for acknowledgment from the receiver before proceeding.
+- Connects to the receiver using CoSimIO.
+- After each solution step, it gathers velocity data and exports it using CoSimIO.
+- Waits for acknowledgment from the receiver before proceeding.
 
-Import Script (import_velocity_from_kratos.py):
+### Import Script (import_velocity_from_kratos.py):
 
-Connects to the Kratos exporter.
-Imports velocity data for each time step and acknowledges the receipt of data.
-Processes and prints the received data.
+- Connects to the Kratos exporter.
+- Imports velocity data for each time step and acknowledges the receipt of data.
+- Processes and prints the received data.
 
 This will allow you to see the data exchange in action, with the import script receiving and processing the velocity data exported by Kratos.
