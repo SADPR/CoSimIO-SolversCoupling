@@ -4,6 +4,10 @@ This repository provides examples of coupling different solvers and scripts usin
 
 This repository is based on the official [CoSimIO tutorial](https://kratosmultiphysics.github.io/CoSimIO/) provided by Kratos Multiphysics. Most of the files differ from the original examples to meet our specific needs, particularly in coupling CoSimIO with another solver. This repository is designed to walk you through the basics, step by step, until you reach the point of coupling two different solvers: Kratos Multiphysics with OpenFOAM. This advanced coupling scenario is not covered in the original repository. For a more detailed exploration of CoSimIO and its capabilities, we encourage you to visit the official documentation and tutorials.
 
+<p align="center">
+     <img src="CoSimIO_Kratos_OpenFOAM_Coupling/media/openfoam_kratos.gif" alt="OpenFOAM Case Simulation" />
+</p>
+
 ## Table of Contents
 
 1. [Installation of CoSimIO](./Installation/README.md)
