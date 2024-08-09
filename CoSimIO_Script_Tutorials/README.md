@@ -1,4 +1,8 @@
-# CoSimIO Example Repository
+# CoSimIO Script Tutorials
+
+This section provides hands-on examples of using CoSimIO for data exchange between Python scripts. These tutorials are designed to help you understand the fundamentals of CoSimIO communication, including connecting, disconnecting, and exchanging data such as velocities and mesh information. The examples do not require solvers and are a great starting point for integrating CoSimIO into more complex workflows.
+
+## CoSimIO Example Repository
 
 This repository is based on the official [CoSimIO tutorial](https://kratosmultiphysics.github.io/CoSimIO/) provided by Kratos Multiphysics. Some files and examples have been adapted to suit specific needs for coupling solvers and data exchange. We encourage you to visit the official documentation for more details.
 
