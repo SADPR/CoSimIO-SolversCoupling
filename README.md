@@ -21,6 +21,9 @@ This repository is based on the official [CoSimIO tutorial](https://kratosmultip
 4. [Simulation Data Exchange with Kratos using CoSimIO](./CoSimIO_Kratos_SimulationDataExchange)
 
    This example illustrates how to perform simulation data exchange using CoSimIO in a Kratos Multiphysics environment.
+   <p align="center">
+  <img src="CoSimIO_Kratos_SimulationDataExchange/media/flow_past_cylinder.gif" alt="Flow Past a Cylinder" />
+</p>
    
 6. [Simulation Data Exchange with OpenFOAM using CoSimIO](./CoSimIO_OpenFOAM_SimulationDataExchange)
 
