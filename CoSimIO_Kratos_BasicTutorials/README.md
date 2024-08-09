@@ -104,7 +104,7 @@ if info.GetInt("connection_status") != CoSimIO.ConnectionStatus.Disconnected:
 print("Disconnected from Kratos")
 ```
 
-# 2. Mesh Mapping with Kratos
+## 2. Mesh Mapping with Kratos
 This example demonstrates how to perform mesh mapping between two meshes using Kratos and an external code (my_code). The data exchange and mesh exchange with Kratos are combined in this case.
 
 ### Running the Example
