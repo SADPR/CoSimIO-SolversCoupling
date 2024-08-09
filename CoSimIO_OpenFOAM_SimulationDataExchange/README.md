@@ -22,6 +22,10 @@ The case files are included in this repository under [OpenFoamCase/pitzDaily](..
 
 You can also download the original tutorial files [here](https://develop.openfoam.com/Development/openfoam/tree/master/tutorials/incompressible/simpleFoam/pitzDaily).
 
+<p align="center">
+  <img src="media/openfoam_case.gif" alt="OpenFOAM Case Simulation" />
+</p>
+
 ## Instructions
 1. Run the OpenFOAM Export Script
 Open a command window and run:
