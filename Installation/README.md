@@ -1,6 +1,6 @@
 ## Installation
 
-This repository is based on the official [CoSimIO tutorial](https://kratosmultiphysics.github.io/CoSimIO/) provided by Kratos Multiphysics. Some files and examples have been adapted to suit specific needs for coupling solvers and data exchange.
+This repository is based on the official [CoSimIO tutorial](https://kratosmultiphysics.github.io/CoSimIO/) provided by Kratos Multiphysics. Some files and examples have been adapted to suit specific needs for coupling solvers and data exchange. For a more detailed exploration of CoSimIO and its capabilities, we encourage you to visit the official documentation and tutorials.
 
 ### 1. Clone the CoSimIO Repository
 
