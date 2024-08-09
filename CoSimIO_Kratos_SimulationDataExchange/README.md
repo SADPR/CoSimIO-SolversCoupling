@@ -7,6 +7,21 @@ Ensure that CoSimIO and KratosMultiphysics are installed and set up correctly:
 - [CoSimIO Installation Guide](https://kratosmultiphysics.github.io/CoSimIO/tutorials/python/integration_co_sim_io.html)
 - [KratosMultiphysics Installation Guide](https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md)
 
+## Flow Past a Cylinder Flow Simulation
+
+This 2D CFD simulation explores the flow past a cylinder benchmark using Kratos. The case involves a cylinder placed in a channel with an inlet velocity and no-slip conditions on the walls. The simulation captures the development of a Von Karman vortex street downstream.
+
+For more details, refer to the [Kratos Example](https://github.com/KratosMultiphysics/Examples/blob/master/fluid_dynamics/validation/body_fitted_cylinder_100Re/README.md).
+
+### Files Included
+
+The case files are included in this repository under [KratosCase/FlowPastACylinder](../KratosCase/FlowPastACylinder.gid).
+
+![Flow Past a Cylinder](media/flow_past_cylinder.gif)
+
+#### Note
+The geometry was adapted so that the outlet of the OpenFOAM case directly connects to the inlet of the Kratos simulation, enabling seamless coupling between the two solvers.
+
 ## Instructions
 1. Run the Kratos Export Script
 Open a command window and run:

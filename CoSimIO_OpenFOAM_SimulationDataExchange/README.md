@@ -5,8 +5,22 @@ This example demonstrates how to set up a simple data exchange where OpenFOAM ex
 ## Prerequisites
 Ensure that CoSimIO and OpenFOAM are installed and configured correctly:
 
-- CoSimIO Installation Guide
-- OpenFOAM Installation Guide
+- [CoSimIO Installation Guide](https://kratosmultiphysics.github.io/CoSimIO/tutorials/python/integration_co_sim_io.html)
+- [OpenFOAM Installation Guide](https://openfoam.org/download/11-ubuntu/)
+
+I used OpenFOAM v11 on Ubuntu 22.04 LTS (codename jammy). This version is compatible with Ubuntu versions 20.04, 22.04, 23.04, and 24.04. It includes ParaView support using the standard paraview package on Ubuntu 22.04.
+
+## Steady Turbulent Flow over a Backward-Facing Step
+
+This example explores steady turbulent flow over a backward-facing step using OpenFOAM's `simpleFoam` solver. It introduces mesh grading with `blockMesh` and demonstrates the solution of steady, incompressible turbulent flow.
+
+For more details, refer to the [OpenFOAM tutorial guide](https://www.openfoam.com/documentation/tutorial-guide/3-compressible-flow/3.1-steady-turbulent-flow-over-a-backward-facing-step).
+
+### Files Included
+
+The case files are included in this repository under [OpenFoamCase/pitzDaily](../OpenFoamCase/pitzDaily).
+
+You can also download the original tutorial files [here](https://develop.openfoam.com/Development/openfoam/tree/master/tutorials/incompressible/simpleFoam/pitzDaily).
 
 ## Instructions
 1. Run the OpenFOAM Export Script
