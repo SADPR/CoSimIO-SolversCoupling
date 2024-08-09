@@ -82,7 +82,6 @@ while end_time <= final_time:
     velocity_file = os.path.join(post_process_dir, "outlet.xy")
 
     # ... (rest of the data export and communication with CoSimIO)
-This allows you to see the data exchange in action, with the import script receiving and processing the velocity data exported by OpenFOAM.
 ```
 
 This will allow you to see the data exchange in action, with the import script receiving and processing the velocity data exported by OpenFOAM.
