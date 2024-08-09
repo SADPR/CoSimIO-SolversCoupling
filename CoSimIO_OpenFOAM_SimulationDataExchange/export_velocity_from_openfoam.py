@@ -25,7 +25,7 @@ control_dict = ParsedParameterFile(os.path.join(case_dir, "system", "controlDict
 # Set initial startTime and endTime
 start_time = 0
 end_time = 1
-final_time = 100  # Set this to the desired end time of the simulation
+final_time = 300  # Set this to the desired end time of the simulation
 
 # Update the controlDict file
 control_dict["startTime"] = start_time

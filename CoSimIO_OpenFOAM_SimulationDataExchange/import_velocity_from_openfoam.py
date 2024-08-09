@@ -17,7 +17,7 @@ if info.GetInt("connection_status") == CoSimIO.ConnectionStatus.Connected:
     print("Connected as import_velocity_from_openfoam_cosimio!")
 
 # Loop to import data for each time step
-for timestep in range(1, 101):
+for timestep in range(1, 301):
     # Prepare to import data
     import_info = CoSimIO.Info()
     import_info.SetString("identifier", f"outlet_velocity_timestep_{timestep}")
