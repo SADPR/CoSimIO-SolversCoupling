@@ -135,7 +135,7 @@ CoSimIO.ExportData(ack_info, ack_data)
 
 By incorporating this process, both solvers remain in sync throughout the simulation, ensuring that data is consistently and reliably exchanged between OpenFOAM and Kratos.
 
-### Note on OpenFOAM Integration
+## Note on OpenFOAM Integration
 To the best of my knowledge, OpenFOAM does not provide a straightforward Python interface for controlling each time step's  directly. As a workaround, this example restarts the simulation at each time step, utilizing OpenFOAM's built-in functions to output the desired data. The data exchange itself is completely handled by CoSimIO.
 
 Here is an example code snippet from the export_velocity_from_openfoam.py script:
