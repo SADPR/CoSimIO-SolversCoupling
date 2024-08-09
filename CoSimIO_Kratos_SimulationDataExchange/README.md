@@ -4,8 +4,8 @@ This example demonstrates how to set up a simulation where Kratos Multiphysics e
 ## Prerequisites
 Ensure that CoSimIO and KratosMultiphysics are installed and set up correctly:
 
-CoSimIO Installation Guide
-KratosMultiphysics Installation Guide
+- [CoSimIO Installation Guide](https://kratosmultiphysics.github.io/CoSimIO/tutorials/python/integration_co_sim_io.html)
+- [KratosMultiphysics Installation Guide](https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md)
 
 ## Instructions
 1. Run the Kratos Export Script
