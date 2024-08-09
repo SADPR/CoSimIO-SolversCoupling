@@ -61,6 +61,8 @@ This script connects to the OpenFOAM exporter, waits for the data at each time s
 ## Note on OpenFOAM Integration
 To the best of my knowledge, OpenFOAM does not provide a straightforward Python interface for controlling each time step's solution directly. As a workaround, this example restarts the simulation at each time step, utilizing OpenFOAM's built-in functions to output the desired data. The data exchange itself is completely handled by CoSimIO.
 
+The Python script uses the PyFoam library, which can be installed from [PyPi](https://pypi.org/project/PyFoam/), to interact with OpenFOAM. You can visualize the results using paraFoam in the directory they were saved, which in this case is [OpenFoamCase/pitzDaily](../OpenFoamCase/pitzDaily).
+
 Here is an example code snippet from the export_velocity_from_openfoam.py script:
 
 ```python
@@ -80,6 +82,7 @@ while end_time <= final_time:
     velocity_file = os.path.join(post_process_dir, "outlet.xy")
 
     # ... (rest of the data export and communication with CoSimIO)
+This allows you to see the data exchange in action, with the import script receiving and processing the velocity data exported by OpenFOAM.
 ```
 
 This will allow you to see the data exchange in action, with the import script receiving and processing the velocity data exported by OpenFOAM.
