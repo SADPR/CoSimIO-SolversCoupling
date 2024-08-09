@@ -13,12 +13,19 @@ These examples demonstrate how to connect an external code with Kratos Multiphys
 
 Make sure you've properly installed CoSimIO and Kratos Multiphysics and have set up your environment variables:
 
+### CoSimIO
 ```bash
 export PYTHONPATH=$PYTHONPATH:/path/to/CoSimIO/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/CoSimIO/bin
 ```
-
 Replace /path/to/CoSimIO with the actual path to your CoSimIO installation.
+
+### Kratos Multiphysics
+```bash
+export PYTHONPATH=$PYTHONPATH:$HOME/Kratos/bin/Release
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Kratos/bin/Release/libs
+```
+Replace with the actual path to your Kratos installation.
 
 ## 1. Connecting to Kratos
 In this example, we establish a connection between an external code (my_code) and Kratos.
@@ -97,7 +104,7 @@ if info.GetInt("connection_status") != CoSimIO.ConnectionStatus.Disconnected:
 print("Disconnected from Kratos")
 ```
 
-# 2. Mesh Mapping with Kratos
+## 2. Mesh Mapping with Kratos
 This example demonstrates how to perform mesh mapping between two meshes using Kratos and an external code (my_code). The data exchange and mesh exchange with Kratos are combined in this case.
 
 ### Running the Example
