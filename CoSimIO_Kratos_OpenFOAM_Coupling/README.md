@@ -4,10 +4,14 @@ This folder contains an example of coupling OpenFOAM and Kratos using CoSimIO fo
 
 ## Files and Directories
 
-- `OpenFoamCase/pitzDaily`: Contains the OpenFOAM case setup.
-- `KratosCase/FlowPastACylinder.gid`: Contains the Kratos case setup.
+- [OpenFoamCase/pitzDaily](../OpenFoamCase/pitzDaily): Contains the OpenFOAM case setup.
+- [KratosCase/FlowPastACylinder.gid](../KratosCase/FlowPastACylinder.gid): Contains the Kratos case setup.
 - `export_velocity_from_openfoam.py`: Script to run OpenFOAM, export velocity data, and communicate with Kratos via CoSimIO.
 - `kratos_cosimio_receiver.py`: Script to run Kratos, import velocity data from OpenFOAM, and perform the coupled simulation.
+
+<p align="center">
+  <img src="media/openfoam_kratos.gif" alt="description of gif"/>
+</p>
 
 ## Running the Example
 
