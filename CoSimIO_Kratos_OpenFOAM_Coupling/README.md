@@ -35,7 +35,7 @@ In the provided scripts, the critical operations for data exchange between OpenF
 
 ### OpenFOAM Script (openfoam_cosimio_sender.py):
 
-CoSimIO Initialization and Connection:
+#### CoSimIO Initialization and Connection:
 
 ```python
 settings = CoSimIO.Info()
