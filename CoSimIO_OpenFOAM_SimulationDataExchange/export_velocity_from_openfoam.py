@@ -17,7 +17,7 @@ connection_name = info.GetString("connection_name")
 sys.stderr = open(os.devnull, 'w')
 
 # Define the case directory
-case_dir = "/home/sebastianadpr/Documents/CoSimIO/Kratos-OpenFoam/OpenFoam/pitzDaily"
+case_dir = "../OpenFoamCase/pitzDaily"
 
 # Load controlDict
 control_dict = ParsedParameterFile(os.path.join(case_dir, "system", "controlDict"))
