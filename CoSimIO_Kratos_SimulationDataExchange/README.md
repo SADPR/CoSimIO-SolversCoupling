@@ -17,6 +17,8 @@ For more details, refer to the [Kratos Example](https://github.com/KratosMultiph
 
 The case files are included in this repository under [KratosCase/FlowPastACylinder](../KratosCase/FlowPastACylinder.gid).
 
+![Flow Past a Cylinder](media/flow_past_cylinder.gif)
+
 #### Note
 The geometry was adapted so that the outlet of the OpenFOAM case directly connects to the inlet of the Kratos simulation, enabling seamless coupling between the two solvers.
 
