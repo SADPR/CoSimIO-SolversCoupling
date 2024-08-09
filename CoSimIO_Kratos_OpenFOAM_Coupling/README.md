@@ -55,15 +55,13 @@ while end_time <= final_time:
 ```
 
 ## Visualization of Results
-You can visualize the OpenFOAM results using ParaView by running paraFoam in the OpenFoamCase/pitzDaily directory.
+You can visualize the OpenFOAM results using ParaView by running paraFoam in the [OpenFoamCase/pitzDaily](../OpenFoamCase/pitzDaily) directory.
 
-For Kratos, the results can be visualized using the provided output paths in the vtk_output directory within the KratosCase/FlowPastACylinder.gid folder.
+For Kratos, the results can be visualized using the provided output paths in the vtk_output directory within the [KratosCase/FlowPastACylinder.gid](../KratosCase/FlowPastACylinder.gid) folder.
 
 ## Requirements
-- OpenFOAM v11: OpenFOAM Installation Guide
-- Kratos Multiphysics: Kratos Installation Guide
-- CoSimIO: Installed and available in your Python environment.
-- PyFoam: A Python package for interacting with OpenFOAM cases. Install via pip:
-```bash
-pip install PyFoam
-```
+- [OpenFOAM Installation Guide](https://openfoam.org/download/11-ubuntu/) v11
+- [KratosMultiphysics Installation Guide](https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md)
+- [CoSimIO Installation Guide](https://kratosmultiphysics.github.io/CoSimIO/tutorials/python/integration_co_sim_io.html)
+- [PyFoam](https://pypi.org/project/PyFoam/)
+
