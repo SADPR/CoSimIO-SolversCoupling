@@ -1,0 +1,21 @@
+{
+    "version"        : "0.2.0",
+    "configurations" : [{
+        "name"    : "python main",
+        "type"    : "python",
+        "request" : "launch",
+        "program" : "MainKratos.py",
+        "console" : "integratedTerminal",
+        "env"     : {
+            "OMP_NUM_THREADS" : "1",
+            "PYTHONPATH"      : [],
+            "LD_LIBRARY_PATH" : "libs"
+        },
+        "cwd"     : "/home/sebastianadpr/Documents/CoSimIO/Kratos-OpenFoam/Kratos/FlowPastACylinder.gid"
+    },{
+        "name"      : "C++ Attach",
+        "type"      : "cppvsdbg",
+        "request"   : "attach",
+        "processId" : "${command:pickProcess}"
+    }]
+}
