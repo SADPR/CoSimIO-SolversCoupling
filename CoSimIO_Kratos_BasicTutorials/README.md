@@ -1,8 +1,10 @@
 
 
-# CoSimIO with Kratos Multiphysics - Example Use Cases
+# CoSimIO with Kratos Multiphysics - Basic Tutorials
 
-This README provides instructions for running example use cases of connecting and performing operations between Kratos Multiphysics and an external code using CoSimIO.
+### Description: 
+
+This section provides simple tutorials for integrating CoSimIO with Kratos Multiphysics, focusing on basic mesh mapping and data exchange between Kratos and external scripts or codes.
 
 ### Notes
 These examples demonstrate how to connect an external code with Kratos Multiphysics using CoSimIO, and perform operations like mesh mapping. The data_exchange and mesh_exchange examples with Kratos are combined into the kratos_mesh_mapping example for simplicity.
