@@ -1,0 +1,73 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  11
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 11-e1fc8c682ae6
+Exec   : foamRun -solver incompressibleFluid -case /home/sebastianadpr/Documents/CoSimIO/Kratos-OpenFoam/OpenFoam/pitzDaily
+Date   : Aug 09 2024
+Time   : 09:53:06
+Host   : "sebastianadpr-ZenBook-UX534FTC-UX534FT"
+PID    : 22503
+I/O    : uncollated
+Case   : /home/sebastianadpr/Documents/CoSimIO/Kratos-OpenFoam/OpenFoam/pitzDaily
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 300
+
+Selecting solver incompressibleFluid
+Selecting viscosity model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kEpsilon
+RAS
+{
+    RASModel        kEpsilon;
+    turbulence      on;
+    printCoeffs     on;
+    Cmu             0.09;
+    C1              1.44;
+    C2              1.92;
+    C3              0;
+    sigmak          1;
+    sigmaEps        1.3;
+}
+
+No MRF models present
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 0.001
+        U: tolerance 0.0001
+        "(k|epsilon|omega|f|v2)": tolerance 0.0001
+
+
+SIMPLE: Operating solver in steady-state mode with 1 outer corrector
+SIMPLE: Operating solver in SIMPLE mode
+
+
+
+Starting time loop
+
+Reading surface description:
+    outlet
+
+Time = 301s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000106122, Final residual = 1.01184e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.000622966, Final residual = 4.21373e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00129702, Final residual = 9.44183e-05, No Iterations 3
+time step continuity errors : sum local = 0.00397828, global = -0.000258315, cumulative = -0.000258315
+smoothSolver:  Solving for epsilon, Initial residual = 0.000105426, Final residual = 7.47158e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000157413, Final residual = 9.76153e-06, No Iterations 4
+ExecutionTime = 0.186702 s  ClockTime = 0 s
+
+End
+
