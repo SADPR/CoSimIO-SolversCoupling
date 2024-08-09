@@ -23,12 +23,86 @@ Open a terminal and run the `export_velocity_from_openfoam.py` script to simulat
 python3 export_velocity_from_openfoam.py
 ```
 
-Step 2: Run the Kratos Simulation
+### Step 2: Run the Kratos Simulation
 In another terminal, run the kratos_cosimio_receiver.py script to simulate the flow past a cylinder in Kratos using the data received from OpenFOAM.
 
 ```bash
 python3 kratos_cosimio_receiver.py
 ```
+
+## Key Parts of the Exchange and Communication in the Code
+In the provided scripts, the critical operations for data exchange between OpenFOAM and Kratos using CoSimIO are outlined:
+
+### OpenFOAM Script (openfoam_cosimio_sender.py):
+
+CoSimIO Initialization and Connection:
+
+```python
+settings = CoSimIO.Info()
+settings.SetString("my_name", "openfoam_cosimio_sender")
+settings.SetString("connect_to", "kratos_cosimio_receiver")
+settings.SetInt("echo_level", 1)
+settings.SetString("solver_version", "1.25")
+info = CoSimIO.Connect(settings)
+```
+
+#### Exporting Velocity Data:
+
+```python
+if os.path.exists(velocity_file):
+    with open(velocity_file, 'r') as file:
+        data = file.readlines()[1:]  # Skip the header
+        velocities = []
+        for line in data:
+            values = line.split()
+            velocities.extend([
+                float(values[0]), float(values[1]), float(values[2]),  # Coordinates (x, y, z)
+                float(values[3]), float(values[4]), float(values[5])   # Velocity components (Ux, Uy, Uz)
+            ])
+        # Prepare data to be exported
+        export_info = CoSimIO.Info()
+        export_info.SetString("identifier", identifier)
+        export_info.SetString("connection_name", connection_name)
+        data_to_export = CoSimIO.DoubleVector(velocities)
+        # Export the data
+        CoSimIO.ExportData(export_info, data_to_export)
+```
+
+### Kratos Script (kratos_cosimio_receiver.py):
+
+#### Importing Velocity Data from OpenFOAM:
+
+```python
+import_info = CoSimIO.Info()
+import_info.SetString("identifier", identifier)
+import_info.SetString("connection_name", self.connection_name)
+data_to_import = CoSimIO.DoubleVector()
+return_info = CoSimIO.ImportData(import_info, data_to_import)
+velocities = list(data_to_import)
+num_points = len(velocities) // 6  # 3 for coordinates and 3 for velocity components
+velocities = np.reshape(velocities, (num_points, 6))
+```
+
+#### Interpolation of Velocity Data:
+
+```python
+def interpolate_velocity(self, x, y, velocities):
+    distances = []
+    for vel in velocities:
+        dist = np.sqrt((vel[0] - x) ** 2 + (vel[1] - y) ** 2)
+        if dist == 0:
+            return vel[3], vel[4]
+        distances.append((1.0 / dist, vel))
+    distances.sort(reverse=True, key=lambda pair: pair[0])
+    closest = distances[:3]
+    sum_weights = sum([pair[0] for pair in closest])
+    normalized_weights = [pair[0] / sum_weights for pair in closest]
+    U_x_interp = sum(w * vel[3] for w, (_, vel) in zip(normalized_weights, closest))
+    U_y_interp = sum(w * vel[4] for w, (_, vel) in zip(normalized_weights, closest))
+    return U_x_interp, U_y_interp
+```
+
+This explanation helps to highlight the key parts of the process for users, while still providing enough context to follow along.
 
 ### Note on OpenFOAM Integration
 To the best of my knowledge, OpenFOAM does not provide a straightforward Python interface for controlling each time step's  directly. As a workaround, this example restarts the simulation at each time step, utilizing OpenFOAM's built-in functions to output the desired data. The data exchange itself is completely handled by CoSimIO.
