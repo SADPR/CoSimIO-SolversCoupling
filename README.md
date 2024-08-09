@@ -10,7 +10,7 @@ This repository is based on the official [CoSimIO tutorial](https://kratosmultip
 
 ## Table of Contents
 
-1. [Installation of CoSimIO](./Installation/README.md)
+1. [Installation of CoSimIO](./Installation)
 
    This section provides a detailed guide on how to install CoSimIO on your system. It covers the necessary prerequisites and steps for setting up CoSimIO.
    
