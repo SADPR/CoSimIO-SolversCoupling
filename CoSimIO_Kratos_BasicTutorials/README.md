@@ -13,12 +13,19 @@ These examples demonstrate how to connect an external code with Kratos Multiphys
 
 Make sure you've properly installed CoSimIO and Kratos Multiphysics and have set up your environment variables:
 
+### CoSimIO
 ```bash
 export PYTHONPATH=$PYTHONPATH:/path/to/CoSimIO/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/CoSimIO/bin
 ```
-
 Replace /path/to/CoSimIO with the actual path to your CoSimIO installation.
+
+### Kratos Multiphysics
+```bash
+export PYTHONPATH=$PYTHONPATH:$HOME/Kratos/bin/Release
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Kratos/bin/Release/libs
+```
+Replace with the actual path to your Kratos installation.
 
 ## 1. Connecting to Kratos
 In this example, we establish a connection between an external code (my_code) and Kratos.
